@@ -48,3 +48,8 @@ body {
 p {
     color: #000000;
 }
+audio{
+    max-width: 100px;
+    align-self: center;
+    
+}
