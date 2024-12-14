@@ -91,3 +91,12 @@ window.addEventListener(
   },
   false
 );
+
+for (var i = 0; i < maxConfettis; i++) {
+  particles.push(new confettiParticle());
+}
+
+// Initialize
+canvas.width = W;
+canvas.height = H;
+Draw();
