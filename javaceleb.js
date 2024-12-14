@@ -49,7 +49,6 @@ function confettiParticle() {
 function Draw() {
   const results = [];
 
-  // Magical recursive functional love
   requestAnimationFrame(Draw);
 
   context.clearRect(0, 0, W, window.innerHeight);
@@ -69,8 +68,7 @@ function Draw() {
 
     if (particle.y <= H) remainingFlakes++;
 
-    // If a confetti has fluttered out of view,
-    // bring it back to above the viewport and let if re-fall.
+    
     if (particle.x > W + 30 || particle.x < -30 || particle.y > H) {
       particle.x = Math.random() * W;
       particle.y = -30;
@@ -96,7 +94,6 @@ for (var i = 0; i < maxConfettis; i++) {
   particles.push(new confettiParticle());
 }
 
-// Initialize
 canvas.width = W;
 canvas.height = H;
 Draw();
