@@ -50,7 +50,13 @@ body {
     padding: 10px 25px;
     border-radius: 8px;
     box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+    transition: transform .2s;
 
+}
+.btn:hover {
+    -ms-transform: scale(1.189);
+    -webkit-transform: scale(1.189);
+    transform: scale(1.189);
 }
 p {
     color: #000000;
