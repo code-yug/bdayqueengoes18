@@ -56,9 +56,7 @@ body {
 
 }
 .btn:hover {
-    -ms-transform: scale(1.189);
-    -webkit-transform: scale(1.189);
-    transform: scale(1.189);
+      transform: translateY(-5px);
 }
 p {
     color: #000000;

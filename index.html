@@ -20,14 +20,24 @@
          </div>
         
         </div>
-        <audio controls autoplay>
+    
+        <audio id="music" autoplay loop>
             <source src="audio1.mp3" type="audio1/mpeg">
             <source src="audio1.ogg">
+    
+
     
          
          Your browser does not support this audio element.
             </audio>
-        <p2>Please play it.</p2>
+            <button class="play-music-button" onclick="playMusic()">Play Music</button>
+
+            <script>
+              function playMusic() {
+                document.getElementById("music").play();
+              }
+              </script>
+              
     </body>
     <style>
         body{

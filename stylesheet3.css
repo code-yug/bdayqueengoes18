@@ -49,6 +49,7 @@ body {
 .container .btn {
     display: flex;
     gap: 25px;
+    border: 5px dashed #ff6f61;
 
 }
 .btn a {
@@ -59,13 +60,11 @@ body {
     padding: 10px 25px;
     border-radius: 8px;
     box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
-    transition: transform .2s;
+    transition: transform .3s ease ;
 
 }
 .btn:hover {
-    -ms-transform: scale(1.189);
-    -webkit-transform: scale(1.189);
-    transform: scale(1.189);
+      transform: translateY(-5px);
 }
 p {
     font-family: "Lucida Handwriting", cursive;
@@ -77,3 +76,12 @@ audio{
     align-self: center;
     
 }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 5px solid #ff6f61;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
