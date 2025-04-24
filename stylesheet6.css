@@ -10,7 +10,6 @@ h1 {
     font-family: 'Luckiest Guy', cursive;
     font-size: 1.8em;
     color: #ff6f61;
-    text-shadow: 2px 2px #ff1493;
     animation: bounce 2s infinite;
   }
   @keyframes bounce {
