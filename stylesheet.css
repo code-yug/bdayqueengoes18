@@ -78,11 +78,7 @@ audio{
     align-self: center;
     
 }
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-  }
+
   .play-music-button {
     background-color: #ff6f61;
     margin-top: 20px;

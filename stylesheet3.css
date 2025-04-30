@@ -61,8 +61,12 @@ body {
     border-radius: 8px;
     box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
     transition: transform .3s ease ;
-
 }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
 .btn:hover {
       transform: translateY(-5px);
 }

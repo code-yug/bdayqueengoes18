@@ -1,0 +1,124 @@
+body {
+    background-color: #ffe5e5;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  h1 {
+    color: #d00000;
+    margin: 20px;
+  }
+  
+  #balloon-container {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
+  }
+  
+  /* Enhanced balloon style */
+  .balloon {
+    width: 60px;
+    height: 80px;
+    background: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    bottom: -100px;
+    cursor: pointer;
+    animation: floatUp 6s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+    z-index: 1;
+    box-shadow: inset -5px -10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Curvy string using pseudo element */
+  .balloon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    border-left: 2px solid #333;
+    border-radius: 50%;
+    animation: wiggle 2s infinite ease-in-out;
+  }
+  
+  /* Smooth floating animation with horizontal drift */
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-50vh) translateX(15px) rotate(2deg);
+    }
+    100% {
+      transform: translateY(-100vh) translateX(-15px) rotate(-2deg);
+    }
+  }
+  
+  /* String wiggle */
+  @keyframes wiggle {
+    0%, 100% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+      transform: translateX(-50%) rotate(5deg);
+    }
+  }
+  
+  /* Pop effect */
+  @keyframes pop {
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  .burst {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    animation: burst 0.6s ease-out forwards;
+    opacity: 0.9;
+  }
+  
+  @keyframes burst {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.5) translate(var(--dx), var(--dy));
+      opacity: 0;
+    }
+  }
+  #nextBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d0006f;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    z-index: 999;
+  }
+  
+  #nextBtn:hover {
+    background-color: #ff4d6d;
+  }
+  
