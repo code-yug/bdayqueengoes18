@@ -25,7 +25,7 @@ function createBalloon() {
   }, 6000);
 }
 
-setInterval(createBalloon, 1000);
+setInterval(createBalloon, 800);
 function createBurst(x, y, color) {
     for (let i = 0; i < 8; i++) {
       const particle = document.createElement('div');
