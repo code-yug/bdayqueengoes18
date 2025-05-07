@@ -16,7 +16,7 @@ h1 {
     margin: 20px;
     color: #ff6961;
     font-family: "Lucida Handwriting", cursive;
-    
+    animation: fadeIn 2s;
 }
 canvas {
   overflow-y: hidden;
@@ -24,6 +24,7 @@ canvas {
   width: 100%;
   margin: 0;
 }
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -31,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffe5e5;
-
+    animation: fadeIn 4s;
 }
 .container {
     display: flex;
@@ -88,4 +89,9 @@ audio{
     border: 5px solid #ff6f61;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
