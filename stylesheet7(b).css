@@ -5,6 +5,7 @@ body {
     margin: 0;
     overflow: hidden;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
   
   h1 {
     color: #d00000;

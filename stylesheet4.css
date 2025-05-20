@@ -7,10 +7,13 @@
 
 }
 h1 {
-    color: #ff6961;
+    color: #f81105;
     animation: fadeIn 2s;
+    font-family: 'Luckiest Guy', cursive;
     
 }
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -51,6 +54,7 @@ body {
 .btn a {
     text-decoration: none;
     color: #111;
+    font-family: 'Luckiest Guy', cursive;
     background: #fff;
     padding: 10px 25px;
     border-radius: 8px;

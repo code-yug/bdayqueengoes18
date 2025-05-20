@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎈 Log in to Birthday Bash</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffe0f0, #e0f7fa);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-card {
+      background-color: #fff6fb;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      position: relative;
+      animation: fadeIn 2s;
+    }
+
+    .login-card::before {
+      content: "🎂";
+      font-size: 50px;
+      position: absolute;
+      top: -30px;
+      left: calc(50% - 25px);
+      animation: fadeIn 2s;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #ff6fa1;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 2px solid #ffd6ec;
+      border-radius: 15px;
+      background-color: #fff;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: #ff9fbc;
+      outline: none;
+    }
+
+    button {
+      background-color: #ffb6d9;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 15px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff80b5;
+    }
+
+    .footer-text {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+
+    .error-msg {
+      color: #ff4d6d;
+      font-size: 0.9rem;
+      display: none;
+      margin-top: 10px;
+    }
+     
+   @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Birthday Gift Login 🎉</h2>
+    <input type="text" id="username" placeholder="🎈 Your name" />
+    <input type="password" id="password" placeholder="🎁 Secret code" />
+    <button onclick="partyTime()">Enter the Party 🎊</button>
+    <div class="error-msg" id="error">Wrong secret code! 🎭 Try again...</div>
+    <div class="footer-text">
+    <a href="https://wa.me/919256916049/?text=password%20toh%20bta" target="_blank" style="text-decoration: none; color: #ff6fa1;">
+    Shit Pass toh batana hi bhul gaya😭(click me)
+    </a>
+    </div>
+  </div>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Party horn sound -->
+  <audio id="partyHorn" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-party-horn-sound-825.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function partyTime() {
+      const password = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      const correctPassword = "Muni kitna achha hai"; // You can change this
+
+      if (password === correctPassword) {
+        // Confetti explosion
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+
+        // Play party horn
+        const horn = document.getElementById("partyHorn");
+        horn.currentTime = 0;
+        horn.play();
+
+        // Redirect after a short party delay
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1200);
+      } else {
+        // Show error message
+        error.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
