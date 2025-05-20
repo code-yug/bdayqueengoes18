@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+
+}
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8em;
+    color: #ff6f61;
+     animation: 
+      fadeInOut1 10s ease forwards;
+  }
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8em;
+    color: #ff6f61;
+     animation: 
+      fadeInOut2 10s ease forwards;
+  }
+
+h3 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8em;
+    color: #ff6f61;
+     animation: 
+      fadeInOut3 10s ease forwards;
+  }
+
+h4 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8em;
+    color: #ff6f61;
+     animation: 
+      fadeInOut4 10s ease forwards;
+  }
+
+
+@keyframes fadeInOut1 {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+@keyframes fadeInOut2 {
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+@keyframes fadeInOut3 {
+    0%   { opacity: 0; }
+    70%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+@keyframes fadeInOut4 {
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+
+canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe5e5;
+
+}
+
+
+
+
+.container .btn {
+    display: flex;
+    gap: 25px;
+    border: 5px dashed #ff6f61;
+    
+}
+.btn a {
+    opacity: 0;
+    text-decoration: none;
+    background: #f8f8f8;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 13.5px;
+    color: #1f0604;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 20s;
+}
+
+p {
+    font-family: "Lucida Handwriting", cursive;
+    color: #000000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+audio{
+    max-width: 100px;
+    align-self: center;
+    
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 5px solid #ff6f61;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .video-container {
+    margin: 20px 0;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 10s;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+  }
