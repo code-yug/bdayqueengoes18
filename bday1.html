@@ -10,11 +10,11 @@
     <body>
         <div class="container">
             <div class="tenor-gif-embed" data-postid="2897253052761084744" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/dance-party-girl-excited-celebrate-gif-2897253052761084744">Dance Party GIF</a>from <a href="https://tenor.com/search/dance-gifs">Dance GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-         <h1>Happy Birthday Vanshikaaa...</h1>
+         <h1 id="typing-text">Happy Birthday Vanshikaaa...</h1>
             
          
          <p>Congrats On Turning 18</p>
-         <p>So, This a small gift website I created for you....</p>
+         <p>So, This is a small gift website I created for you....</p>
         
          <div class="btn">
 
@@ -32,13 +32,45 @@
          
          Your browser does not support this audio element.
             </audio>
-            <button class="play-music-button" onclick="playMusic()">Play Music</button>
+            
+         <button class="play-music-button" onclick="playMusic()">Play Music</button>
+            
+       <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-            <script>
-              function playMusic() {
+  <script>
+    function playMusic() {
                 document.getElementById("music").play();
               }
-              </script>
+
+    // Typing effect
+    const text = "Happy Birthday Vanshikaaa...";
+    let index = 0;
+    const typingSpeed = 80;
+    const heading = document.getElementById("typing-text");
+    heading.textContent = "";
+
+    function typeEffect() {
+      if (index < text.length) {
+        heading.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, typingSpeed);
+      }
+    }
+
+    // Start confetti automatically on load
+    window.onload = function () {
+      typeEffect();
+      setTimeout(() => {
+        confetti({
+          particleCount: 200,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }, 1000);
+    };
+  </script>
+
+
               
     </body>
     <style>
