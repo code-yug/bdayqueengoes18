@@ -118,7 +118,7 @@
     function partyTime() {
       const password = document.getElementById("password").value;
       const error = document.getElementById("error");
-      const correctPassword = "Muni kitna achha hai"; // You can change this
+      const correctPassword = "Parihunmain"; 
 
       if (password === correctPassword) {
         // Confetti explosion
@@ -133,12 +133,11 @@
         horn.currentTime = 0;
         horn.play();
 
-        // Redirect after a short party delay
+        
         setTimeout(() => {
-          window.location.href = "index2.html";
+          window.location.href = "bday1.html";
         }, 1200);
       } else {
-        // Show error message
         error.style.display = "block";
       }
     }
