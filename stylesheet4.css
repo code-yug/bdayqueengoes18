@@ -7,12 +7,12 @@
 
 }
 h1 {
-    color: #f81105;
+    color: #080100;
     animation: fadeIn 2s;
-    font-family: 'Luckiest Guy', cursive;
-    
+    font-family: "Quicksand", cursive;
+    position: relative;  
+    font-size: 20px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -48,15 +48,16 @@ body {
 }
 .container .btn {
     display: flex;
-    gap: 25px;
-
+   flex-direction: column;
+   align-items: center; /* Optional: center-align stuff */
+   gap: 10px;
 }
 .btn a {
     text-decoration: none;
     color: #111;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: "Quicksand", cursive;
     background: #fff;
-    padding: 10px 25px;
+    padding: 5px 15px;
     border-radius: 8px;
     box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
     transition: transform .2s;

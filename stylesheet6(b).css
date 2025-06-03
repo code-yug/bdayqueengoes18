@@ -7,14 +7,14 @@
 
 }
 h1 {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: "Quicksand", cursive;
     font-size: 1.8em;
     color: #ff6f61;
      animation: 
       fadeInOut1 10s ease forwards;
   }
 h2 {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: "Quicksand", cursive;
     font-size: 1.8em;
     color: #ff6f61;
      animation: 
@@ -22,7 +22,7 @@ h2 {
   }
 
 h3 {
-    font-family: 'Luckiest Guy', cursive;
+    
     font-size: 1.8em;
     color: #ff6f61;
      animation: 
@@ -30,7 +30,7 @@ h3 {
   }
 
 h4 {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: "Quicksand", cursive;
     font-size: 1.8em;
     color: #ff6f61;
      animation: 

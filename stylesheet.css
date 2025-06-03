@@ -10,6 +10,7 @@
 h1 {
     color: #ff6961;
     animation: fadeIn 2s;
+    font-family: 'Luckiest Guy', cursive;
 }
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -74,6 +75,9 @@ body {
 p {
     color: #850a0a;
     animation: fadeIn 2s;
+        font-family: 'Luckiest Guy', cursive;
+
+
 }
 audio{
     max-width: 100px;

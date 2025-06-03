@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Cake 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fdfbfb, #fac9c9);
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      color: #444;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #d00000;
+      margin: 20px;
+      font-size: 1.8rem;
+    }
+
+   
+
+    .cake-container {
+        position: relative;
+         width: 200px;
+         margin: 20vh auto 0 auto;
+    }
+
+    .cake-layer {
+      width: 200px;
+      height: 50px;
+      background-color: #ffdfd3;
+      border-radius: 10px;
+      margin-top: -10px;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .icing {
+      width: 200px;
+      height: 20px;
+      background-color: #fcbad3;
+      border-radius: 20px 20px 0 0;
+      position: relative;
+      top: -5px;
+    }
+
+    .drizzle {
+      position: absolute;
+      top: -15px;
+      width: 200px;
+      height: 30px;
+      background: #ffb6b9;
+      border-radius: 50% 50% 0 0;
+      z-index: -1;
+    }
+
+    .candles {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .candle {
+      width: 10px;
+      height: 30px;
+      background: #88c9bf;
+      border-radius: 2px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .flame {
+      width: 10px;
+      height: 10px;
+      background: #ffd166;
+      border-radius: 50%;
+      position: absolute;
+      top: -12px;
+      left: 0;
+      box-shadow: 0 0 10px #ff9e00;
+      animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.2); opacity: 0.7; }
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #89bbf5;
+      display: none;
+    }
+
+    .btn {
+      margin-top: 30px;
+      display: none
+    }
+
+    .btn a {
+      background-color: #ffdfd3;
+      color: #444;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn a:hover {
+      background-color: #c1f2b0;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Wishingg timeee!!!!</h1>
+  <p>(Click the flames)</p>
+
+  <div class="cake-container">
+    <div class="candles">
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+    <div class="drizzle"></div>
+    <div class="icing"></div>
+    <div class="cake-layer"></div>
+    <div class="icing"></div>
+    <div class="cake-layer"></div>
+    <div class="icing"></div>
+    <div class="cake-layer"></div>
+  </div>
+
+  <div class="message" id="wishMessage">🌟 Yayyy! Candle toh blow ho gyinnn... Now Make a wish! 🌟</div>
+
+  <div class="btn">
+    <a href="balloon.html"> Wish granted! Lets's move ahead🎉</a>
+  </div>
+
+   <audio autoplay>
+            <source src="audio2.mp3" type="audio2/mpeg">
+            <source src="audio2.ogg">
+            Your browser does not support this audio element.
+        </audio>
+
+ <script>
+  const flames = document.querySelectorAll('.candle .flame');
+  const message = document.getElementById('wishMessage');
+  const button = document.querySelector('.btn');
+
+  flames.forEach(flame => {
+    flame.addEventListener('click', () => {
+      flame.style.display = 'none';
+
+      if ([...flames].every(f => f.style.display === 'none')) {
+        message.style.display = 'block';
+        button.style.display = 'block';
+
+        
+        confetti({
+          particleCount: 150,
+          spread: 90,
+          origin: { y: 0.6 },
+          colors: ['#ffb6b9', '#c1f2b0', '#fcbad3', '#ffd166', '#a0e7e5']
+        });
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
