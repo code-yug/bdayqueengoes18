@@ -22,10 +22,10 @@ h2 {
   }
 
 h3 {
-    
+    font-family: "Quicksand", cursive;
     font-size: 1.8em;
     color: #ff6f61;
-     animation: 
+    animation: 
       fadeInOut3 10s ease forwards;
   }
 
