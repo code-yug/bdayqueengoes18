@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎁 Birthday Gate</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffe0f0, #f3f9ff);
+      text-align: center;
+      padding: 60px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    #lock-screen {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ffb6c1;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .cake-emoji {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    #wrong-pass {
+      color: red;
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="lock-screen">
+    <div class="cake-emoji">🎂🔒</div>
+    <h1>Birthday Vault</h1>
+    <p>Only the chosen ones know the password 🎈</p>
+    <input type="password" id="password" placeholder="Enter secret code">
+    <br>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="wrong-pass">Wrong password! Try again 🎭</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const correctPassword = "maimunisechhotihun";
+    const redirectURL = "nu_2.html"; 
+
+    function checkPassword() {
+      const entered = document.getElementById("password").value;
+      const wrongPass = document.getElementById("wrong-pass");
+
+      if (entered === correctPassword) {
+        wrongPass.style.display = "none";
+        confettiBlast();
+        setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 2000); // 2 seconds of confetti then redirect
+      } else {
+        wrongPass.style.display = "block";
+      }
+    }
+
+    function confettiBlast() {
+      const duration = 2 * 1000;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 6,
+          angle: 60,
+          spread: 60,
+          origin: { x: 0 },
+          colors: ['#ff69b4', '#ffe0f0', '#f3f9ff']
+        });
+        confetti({
+          particleCount: 6,
+          angle: 120,
+          spread: 60,
+          origin: { x: 1 },
+          colors: ['#ff69b4', '#ffe0f0', '#f3f9ff']
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    }
+  </script>
+</body>
+</html>
