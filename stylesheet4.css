@@ -12,6 +12,11 @@ h1 {
     font-family: "Quicksand", cursive;
     position: relative;  
     font-size: 20px;
+    background-color: rgba(252, 177, 177, 0.5); /* semi-transparent background */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 15px;
+      max-width: 90%;
 }
 
 @keyframes fadeIn {
